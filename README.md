@@ -6,6 +6,11 @@ This monte carlo simulation models two distinct bike sharing models.  One model 
 
 This is a very fast and crude model where realism is balanced with simplicity both in terms of implementation and comprehension of the model. Assumptions are described through out the model and data is taken from "The Bike Share-Planning Guide" written by the Institude for Transportation and developy policy (https://www.itdp.org/the-bike-share-planning-guide-2/)
 
+In short:   
+autonomous model trip time = wait for bike to arrive + bike to destination  
+traditional model trip time = talk to bike station + bike to station with a open docking slot + walk to destination
+walk trip time = walking the Euclidien distance to the end location from start location
+
 Main assumptions:   
 
 1) Demand for a trip are uniform through out the system (no rebalancing of the fleet since there are not "hot spots" where trips begin or end)  
