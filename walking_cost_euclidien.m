@@ -1,4 +1,4 @@
-function [ time_cost ] = walking_cost_euclidien(start_coordinate, end_coordinate)
+function [ time_cost ] = walking_cost_euclidien(start_coordinate, end_coordinate) 
 %walking_cost_euclidien finds the time to talk from start to end
 
 human_walk_speed = 3; %(km/hour);

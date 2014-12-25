@@ -1,4 +1,4 @@
-function [ time_cost, bike_locations ] = autonomous_model_cost(map_size, bike_locations,start_coordinate, end_coordinate)
+function [ time_cost, bike_locations ] = autonomous_model_cost(map_size, bike_locations,start_coordinate, end_coordinate) 
 %autonomous_model_cost finds the cost to travel with an autobike
 %cost = time to wait for bike arrival + time to travel distance
 

@@ -1,7 +1,7 @@
 function [ time_cost, bikes_at_station_location, empty_slots_at_station_location ] = traditional_model_cost(map_size, bikes_at_station_location, empty_slots_at_station_location,start_coordinate, end_coordinate)
 %traditional model cost finds the cost to travel in a traditional bike
 %sharing model
-%cost = time to walk to station with empty bike + time to bike to an empty
+%cost = time to walk to station with empty bike + time to bike to an empty 
 %station near the end point + time to talk from station to end location
 
 human_bike_speed = 15;

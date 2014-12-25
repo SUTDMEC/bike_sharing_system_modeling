@@ -1,4 +1,4 @@
-function [ map ] = populate_station(map, x_spacing, y_spacing )
+function [ map ] = populate_station(map, x_spacing, y_spacing ) 
 %Populate station places a 1 to represent a station at spacing
 %Note the first and last columns are left blank to represent
 %a minimum of 1 block of talking to a station.

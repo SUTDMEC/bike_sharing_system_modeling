@@ -1,4 +1,4 @@
-%Written by Andrew Andrade
+%Written by Andrew Andrade 
 %Description: This monte carlo simulation models two distinct bike sharing
 %models.  One model is with a autonomous driving bike which can
 %automatically go to drivers up request, rebalance based on demand, and be

@@ -1,4 +1,4 @@
-function [ heuristic] = generate_manhattan_huristic( map_size, end_coordinate )
+function [ heuristic] = generate_manhattan_huristic( map_size, end_coordinate ) 
 %Creates matrix the size of the the map assigns the distance to the end 
 %coordinate as the heuristic
 

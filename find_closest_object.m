@@ -1,4 +1,4 @@
-function [object_cordinate] = find_closest_object(grid_of_objects, possible_movements, present_location, heuristic)
+function [object_cordinate] = find_closest_object(grid_of_objects, possible_movements, present_location, heuristic) 
 %Given a matrix of objects (represented by a nonzero) return the closest given
 %present_location coordiante and possible movements
 %implementation uses a A star styled search for the closest non zero location
