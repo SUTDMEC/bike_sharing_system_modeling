@@ -1,4 +1,4 @@
-Autonomous vs Traditional Bike Sharing Model Scability Simulation
+Bike Sharing Model Scability Simulation
 ==============================
 
 ##Summary
