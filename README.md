@@ -1,15 +1,27 @@
-biking_sharing_system_modeling
+Autonomous vs Traditional Bike Sharing Model Scability Simulation
 ==============================
-A quick, dirty and crude monte carlo simulation of two bike sharing models
 
-This monte carlo simulation models two distinct bike sharing models.  One model is with a autonomous driving bike which can automatically go to drivers up request, rebalance based on demand, and be "free floating" in the system.  The other model is a traditional station based bike sharing model where there are stations with bikes and open slots.  Finally the trip time to just walk to the location is calculated both if traveled by streets (manhattan distance) and the euclidien distance.
+#Summary
+This monte carlo simulation models two distinct bike sharing models. One model is with a autonomous driving bike which can automatically go to drivers up request, rebalance based on demand, and be "free floating" in the system.  The other model is a traditional station based bike sharing model where there are stations with bikes and open slots.  Finally the trip time to just walk to the location is calculated both if traveled by streets (manhattan distance) and the euclidien distance
 
 This is a very fast and crude model where realism is balanced with simplicity both in terms of implementation and comprehension of the model. Assumptions are described through out the model and data is taken from "The Bike Share-Planning Guide" written by the Institude for Transportation and developy policy (https://www.itdp.org/the-bike-share-planning-guide-2/)
 
-In short:   
-autonomous model trip time = wait for bike to arrive + bike to destination  
-traditional model trip time = talk to bike station + bike to station with a open docking slot + walk to destination
-walk trip time = walking the Euclidien distance to the end location from start location
+##Implentation in short:
+- Multiheuristic A* search algorithm used to find shortest path
+- Random seed of bike stations and floating bikes based on model assumptions
+- autonomous model trip time = wait for bike to arrive + bike to destination  
+- traditional model trip time = talk to bike station + bike to station with a open docking slot + walk to destination
+- walk trip time = walking the Euclidien distance to the end location from start location
+
+Autonomous Model:
+![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/auto.png "Autonomous Model")
+
+Traditional Model:
+![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/costmodel.jpg "Traditional Station Model")
+
+Results Summary:
+![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/station.png "Results")
+
 
 Main assumptions:   
 
