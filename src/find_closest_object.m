@@ -30,18 +30,18 @@ object_found = [];
 
 %If a bike is found at present location
 if (0 < grid_of_objects(present_location(1), present_location(2)))
-   found = true;
-   object_found= [0, present_location];
+    found = true;
+    object_found= [0, present_location];
 end
 
 
 count = 0;
-    while  not(found) && not(resign)
-        
+while  not(found) && not(resign)
+
         %check if stack is empty ie. no more left to check
         if (~size(searched_stack,1))
             resign = true;
-        
+
         else
             %sort so the least total cost is on top
             searched_stack = sortrows(searched_stack);
@@ -59,12 +59,12 @@ count = 0;
             %Make checked non zero to indicated we have traved to location 
             checked(y,x) = count;
             count = count + 1;
-            
+
             %if an object is found
             if (0 < grid_of_objects(y,x))
-               found = true;
-               object_found = [cost+ heuristic(y,x), y, x];    
-            %search all possible movements
+                found = true;
+                object_found = [cost+ heuristic(y,x), y, x];    
+                %search all possible movements
             else
                 for iii= 1: size (possible_movements,1)
                     y2 = y + possible_movements(iii,1);
@@ -76,8 +76,8 @@ count = 0;
                             searched_stack = [searched_stack ; total_cost, cost, y2, x2];
                             checked(y2,x2) = count;
 
-                             %if bike is found
-                             if (grid_of_objects(y2,x2)> 0)
+                            %if bike is found
+                            if (grid_of_objects(y2,x2)> 0)
                                  object_found = [cost, y2, x2];
                                  found = true;
                              end
@@ -87,13 +87,13 @@ count = 0;
             end
         end
     end
-    
-closest_object_found = sortrows(object_found);   
 
-%in case no object is found, return nothing
-object_find_check = size (closest_object_found);
-if(object_find_check)
-    object_cordinate = closest_object_found(1,2:3);
+    closest_object_found = sortrows(object_found);   
+
+    %in case no object is found, return nothing
+    object_find_check = size (closest_object_found);
+    if(object_find_check)
+        object_cordinate = closest_object_found(1,2:3);
 end
 
 end

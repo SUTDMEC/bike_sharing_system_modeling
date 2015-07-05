@@ -9,14 +9,14 @@ human_walk_speed = 3; %(km/hour);
 grid_size = 100/1000 ; %in km *(100 meters /(1000 m/km))
 
 walking_movements = [-1 0; % go up
-         0 -1;   % go left
-         1 0; % go down
-         0 1;% go right
-         %1 1;
-         %-1 1
-        % -1 -1
+0 -1;   % go left
+1 0; % go down
+0 1;% go right
+%1 1;
+%-1 1
+% -1 -1
 %         1 -1 
-                ];
+];
 
 %generate heuristics for trip
 heuristic1 = generate_euclidian_huristic(map_size, start_coordinate);
