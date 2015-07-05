@@ -8,10 +8,10 @@ grid_size = 100/1000 ; %in km *(100 meters /(1000 m/km))
 
 
 bike_movements = [-1 0; % go up
-         0 -1;   % go left
-         1 0; % go down
-         0 1];% go right
-     
+0 -1;   % go left
+1 0; % go down
+0 1];% go right
+
 %heuristic used for A* is manhattan because bike travels on city block
 heuristic = generate_manhattan_huristic (map_size, end_coordinate);
 

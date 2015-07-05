@@ -22,7 +22,7 @@ for  station_spacing = 1:2:9
     size = station_spacing *10; 
     map_size = [size,size];
     station_map = zeros(map_size);
-    
+
     %Set station locations with bikes and empty slots
     station_map = populate_station(station_map, station_spacing,station_spacing);
     bikes_per_station = 10;
@@ -31,7 +31,7 @@ for  station_spacing = 1:2:9
     empty_slots_at_station = station_map .* bikes_per_station *empty_slots_per_bike;
     total_number_bikes = sum(sum(bikes_at_station));
     bike_per_grid = total_number_bikes / (size*size); 
-    
+
     %Scatter autonomous bikes accross the same sized map
     %Assumption: the total number of bikes would be about equivilent in
     %both systems.
@@ -54,7 +54,7 @@ for  station_spacing = 1:2:9
     total_time_cost (4,iii) = 0;
     %Walking time (on a euclidien distance) aka taking short cuts
     total_time_cost (5,iii) = 0;
-    
+
     %run a monte carlo simulation given number of trips
     number_trips = 10000;
     for trip_count = 1:number_trips;
@@ -63,13 +63,13 @@ for  station_spacing = 1:2:9
         %accoess the grid (homogenous demand)
         start_coordinate = randi([1,map_size(1)],1,2);
         end_coordinate = randi([1,map_size(1)   ],1,2);
-        
+
         %Calculate the time for the trip
         [autonomous_time_cost, avaliable_bike_map ]= autonomous_model_cost(map_size, avaliable_bike_map,start_coordinate, end_coordinate);
         [traditional_time_cost, bikes_at_station, empty_slots_at_station ] = traditional_model_cost(map_size, bikes_at_station, empty_slots_at_station,start_coordinate, end_coordinate);
         only_walking_time_cost = walking_cost(start_coordinate, end_coordinate);
         only_walking_euclidien_time_cost = walking_cost_euclidien (start_coordinate, end_coordinate);
-        
+
         %tally the total costs for all the trips
         total_time_cost (2,iii) = total_time_cost(2,iii) + autonomous_time_cost;
         total_time_cost (3,iii) = total_time_cost (3,iii) + traditional_time_cost;    

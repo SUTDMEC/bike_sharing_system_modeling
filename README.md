@@ -15,10 +15,10 @@ This is a very fast and crude model where realism is balanced with simplicity bo
 
 ###Model Diagrams
 Autonomous Model:
-![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/auto.png "Autonomous Model")
+![alt text](inc/auto.png "Autonomous Model")
 
 Traditional Model:
-![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/station.png "Traditional Station Model")
+![alt text](inc/station.png "Traditional Station Model")
 
 
 ###Main assumptions:   
@@ -28,4 +28,4 @@ Traditional Model:
 4) Total number of bikes in both the autonomous and traditional station system are equal (maintanace and rebalancing costs for both systems are about equal)  
 
 ##Results Summary:
-![alt text](https://github.com/mrandrewandrade/scratch/raw/master/images/autobike_results/costmodel.jpg "Results")
+![alt text](/inc/costmodel.jpg "Results")
